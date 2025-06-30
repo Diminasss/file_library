@@ -1,11 +1,11 @@
-#include "filelib.h"
+п»ї#include "filelib.h"
 #include <exception>
 
 
 const char* FileNotFoundError::what() const noexcept {
-    return "Файл не существует";
+    return "Р¤Р°Р№Р» РЅРµ СЃСѓС‰РµСЃС‚РІСѓРµС‚";
 }
 
 const char* FileCanNotBeOpenError::what() const noexcept {
-	return "Файл не может быть открыт";
+	return "Р¤Р°Р№Р» РЅРµ РјРѕР¶РµС‚ Р±С‹С‚СЊ РѕС‚РєСЂС‹С‚";
 }

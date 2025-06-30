@@ -1,15 +1,15 @@
-#include "filelib.h"
+п»ї#include "filelib.h"
 
 File::File(const std::string& path) {
 
 	if (!fs::exists(path)) {
-		throw FileNotFoundError(); // Проверка файла на существование с выбросом исключения
+		throw FileNotFoundError(); // РџСЂРѕРІРµСЂРєР° С„Р°Р№Р»Р° РЅР° СЃСѓС‰РµСЃС‚РІРѕРІР°РЅРёРµ СЃ РІС‹Р±СЂРѕСЃРѕРј РёСЃРєР»СЋС‡РµРЅРёСЏ
 	}
 
-	stream.open(path, std::ios::in | std::ios::out); // Открытие и удержание файла для чтения и записи
+	stream.open(path, std::ios::in | std::ios::out); // РћС‚РєСЂС‹С‚РёРµ Рё СѓРґРµСЂР¶Р°РЅРёРµ С„Р°Р№Р»Р° РґР»СЏ С‡С‚РµРЅРёСЏ Рё Р·Р°РїРёСЃРё
 
 	if (!stream.is_open()) {
-		throw FileCanNotBeOpenError(); // Проверка файла на открываемость с выбросом исключения
+		throw FileCanNotBeOpenError(); // РџСЂРѕРІРµСЂРєР° С„Р°Р№Р»Р° РЅР° РѕС‚РєСЂС‹РІР°РµРјРѕСЃС‚СЊ СЃ РІС‹Р±СЂРѕСЃРѕРј РёСЃРєР»СЋС‡РµРЅРёСЏ
 	}
 }
 
