@@ -257,3 +257,4 @@ FodyWeavers.xsd
 *.msm
 *.msp
 *.sln.iml
+build/
