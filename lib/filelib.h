@@ -1,7 +1,9 @@
 ﻿#pragma once
-#include <string>
+
 #include <fstream>
 #include <filesystem>
+#include <string>
+#include <exception>
 
 
 namespace fs = std::filesystem;
@@ -18,6 +20,9 @@ class File {
 public:
 	File(const std::string& path);
 	~File();
+	std::string readLine();
+	void writeLine(const std::string& line);
+	void goToBegin();
 private:
 	std::fstream stream;
 };
@@ -29,6 +34,21 @@ public:
 };
 
 class FileCanNotBeOpenError : public std::exception {
+public:
+	const char* what() const noexcept override;
+};
+
+class NotAFileError : public std::exception {
+public:
+	const char* what() const noexcept override;
+};
+
+class ReadingError : public std::exception {
+public:
+	const char* what() const noexcept override;
+};
+
+class WritingError : public std::exception {
 public:
 	const char* what() const noexcept override;
 };
