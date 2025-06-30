@@ -5,6 +5,8 @@ using namespace std;
 
 int main()
 {
-    
+    setlocale(LC_ALL, "Russian");
+    File file("example.txt");
+    cout << "Файл открыт";
     return 0;
 }
