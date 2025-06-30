@@ -91,5 +91,7 @@ int main()
     catch (const std::exception& e) {
         std::cerr << "Исключение: " << e.what() << '\n';
     }
+    std::cout << "Нажмите Enter для выхода...";
+    std::cin.get();
     return 0;
 }
