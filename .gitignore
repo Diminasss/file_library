@@ -1,6 +1,7 @@
 *.d
 *.slo
 *.lo
+.idea/
 *.o
 *.obj
 *.gch
